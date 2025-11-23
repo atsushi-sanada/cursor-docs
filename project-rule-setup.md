@@ -139,7 +139,14 @@ Project Visionの回答を得たら、以下の手順でAIが2～5のセクシ�
    - **Documentation Policy**: @rulesのMarkdown記法ルール、ドキュメント作成方針を参照して生成
    - **Development Mindset**: @rulesのコーディング規約、命名規則、開発方針を参照して生成
 
-4. **生成方針（重要: 簡潔さを重視）**
+4. **生成方針（重要: テンプレート遵守と簡潔さを重視）**
+   - **テンプレート項目を必ず含める**: 以下の5つのセクションを必ず含めてください
+     - Project Vision（ユーザーの回答）
+     - Core Principles（優先順位、ユーザー体験の基本方針、設計上の思想）
+     - Architecture Philosophy（ディレクトリ構成の思想、責務分離の方針、データ・状態管理の基本思想）
+     - Documentation Policy（ドキュメントの一貫性、AIが作るドキュメントの扱い方の方針）
+     - Development Mindset（過度な複雑化を避ける、名前は読みやすく役割が明確、機能追加時の基本スタンス）
+   - **テンプレート形式に従う**: @AGENTS.mdのテンプレート構造を必ず遵守してください
    - **簡潔に記述**: 各セクションは要点を絞り、1項目あたり1〜3行程度に収める
    - **箇条書きを優先**: 長文の説明は避け、箇条書きで要点を明確に
    - **判断基準は1行**: 判断基準は1行で簡潔に記述（例：「AIが理解しやすいか？」）
@@ -147,7 +154,6 @@ Project Visionの回答を得たら、以下の手順でAIが2～5のセクシ�
    - **全体で50行以内を目安**: AGENTS.md全体が50行程度になるよう調整（Project Visionを含む）
    - @rulesに記載されている内容を優先的に反映
    - Project Visionと整合性が取れるように調整
-   - AGENTS.mdのテンプレート形式に従う
    - 具体的で実行可能な内容にする
 
 5. **プレビューを表示**
@@ -190,6 +196,8 @@ Project Visionの回答を得たら、以下の手順でAIが2～5のセクシ�
 ```
 
 **重要**: 
+- **テンプレート項目を必ず含める**: 上記5つのセクション（Project Vision、Core Principles、Architecture Philosophy、Documentation Policy、Development Mindset）を必ず含めてください
+- **テンプレート形式に従う**: @AGENTS.mdのテンプレート構造と項目名を必ず遵守してください
 - **簡潔さを最優先**: 各項目は1〜3行程度に収め、長文の説明は避ける
 - **全体で50行以内を目安**: AGENTS.md全体が50行程度になるよう調整
 - **箇条書きを優先**: 長文の段落は避け、箇条書きで要点を明確に
@@ -532,5 +540,7 @@ alwaysApply: false
 
 7. **テンプレートの遵守**: 
    - AGENTS.mdの作成時は、必ず@AGENTS.mdのテンプレート形式に従う
+   - **テンプレート項目を必ず含める**: Project Vision、Core Principles、Architecture Philosophy、Documentation Policy、Development Mindsetの5つのセクションを必ず含める
+   - **テンプレート構造を遵守**: セクション名や項目名はテンプレート通りに記述する
    - **簡潔さを重視**: AGENTS.mdは全体で50行以内を目安とし、各項目は1〜3行程度に収める
    - .mdcファイルの作成時は、必ずメタ情報（description, globs, alwaysApply）を含める
