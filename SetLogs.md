@@ -26,9 +26,9 @@
 
 ## 入力
 
-- `error_log`: 対象処理で出力されたエラーログ全文（Cursor Docs貼付用）
+- `error_log`: 対象処理で出力されたエラーログ全文（Cursor Commands貼付用）
 - `reproduction_steps`: 再現手順、および期待動作と実際動作の差異
-- `context`: 直前のチャットログや提供済みログを含む関連コンテクスト（Cursor Docsで呼び出し）
+- `context`: 直前のチャットログや提供済みログを含む関連コンテクスト（Cursor Commandsで呼び出し）
 - `code_reference`: ログ対象となる関数／機能の概要説明
 - `environment`: 言語・フレームワーク・ライブラリのバージョン情報
 
