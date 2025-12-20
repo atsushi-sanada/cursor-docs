@@ -99,14 +99,24 @@ Google Apps Script（GAS）を JavaScript で IDE 開発するための作業環
   - 既に存在する場合は内容を確認し、不足している設定のみ追加
 - `.claspignore`の作成（存在しない場合）
   - 以下の内容で作成：
+
     ```
-    **/**
-    !src/**
-    !.clasp.json
-    !.claspignore
-    !package.json
-    !package-lock.json
+    # node_modulesを除外
+    node_modules/
+
+    # ルートディレクトリの不要なファイルを除外
+    *.bat
+    *.md
+    package*.json
+
+    # .git関連を除外
+    .git/
+    .gitignore
     ```
+
+  - **重要**: `**/**`で全てを除外する方式は使用しない
+    - `clasp`が`src`配下のファイルを正しく認識できない場合があるため
+    - 除外したいファイル/ディレクトリを明示的に指定する方式を推奨
   - 既に存在する場合は内容を確認し、不足している項目のみ追加
 - 基本的なサンプルコードの作成（オプション、存在しない場合）
   - `src/main.gs`が存在しない場合のみ作成
@@ -212,6 +222,11 @@ Google Apps Script（GAS）を JavaScript で IDE 開発するための作業環
   - `clasp login`エラー: 認証プロセスの再実行を案内
   - `clasp create`エラー: プロジェクト名の重複や権限の問題を確認
   - `clasp push/pull`エラー: scriptId の確認、ネットワーク接続の確認を案内
+- **`.claspignore`設定の問題**:
+  - `clasp status`で`src`配下が`Untracked files`として表示される場合、`.claspignore`の設定を確認
+  - `**/**`で全てを除外する方式が原因の可能性がある
+  - 明示的に除外するファイルだけを指定する方式に変更することを推奨
+  - 修正後は`clasp status`で`src`配下のファイルが`Tracked files`に表示されることを確認
 - **API 未有効化**: Google Apps Script API の有効化手順を詳細に案内
 - **Node.js/npm 未インストール**: インストール手順を案内
 - **clasp 未インストール**: インストールコマンドを実行
